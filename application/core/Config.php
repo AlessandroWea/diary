@@ -7,8 +7,16 @@ class Config
 	// 'route/(pattern)' => 'controller/action/param1/param2/...'
 	// 'news/([0-9]+)' => 'news/view/$1',
 	public static $routes = array(
-		'posts' => 'posts/index',
-		'post/([0-9]+)' => 'posts/single/$1'
+		//IndexController
+		'' => 'index/main',
+		//AccountController
+		'login' => 'account/login',
+		'signup' => 'account/signup',
+		'logout' => 'account/logout',
+		//WritingController
+		'write' => 'writing/write',
+		'view/([0-9]+)' => 'writing/view/$1',
+
 	);
 
 	public static $db = [

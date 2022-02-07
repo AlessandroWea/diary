@@ -23,20 +23,21 @@ class Router
 	public function run()
 	{
 		$uri = $this->getURI();
+		$result = null;
 
 		foreach($this->routes as $uriPattern => $path){
-			if(preg_match("~$uriPattern~", $uri)){
+			if(preg_match("#^$uriPattern$#", $uri)){
 
-				$internalRoute = preg_replace("~$uriPattern~", $path, $uri);
+				$internalRoute = preg_replace("#^$uriPattern$#", $path, $uri);
 
 				$segments = explode('/',$internalRoute);
-
 				//for the constructor of a controller
 				$controllerClassName = $segments[0];
 				$controllerActionName = $segments[1];
-
+			
 				$controllerName = array_shift($segments) . 'Controller';
 				$controllerName = ucfirst($controllerName);
+
 				$actionName = 'action' . ucfirst(array_shift($segments));
 
 				$parameters = $segments;
