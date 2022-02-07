@@ -1,3 +1,116 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: #aaa;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+:root {
+    --bar-border-color: #777;
+}
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+}
+
+.bar {
+    width: 25%;
+    background-color: #999;
+    border-right: 1px solid var(--bar-border-color);
+}
+
+.bar_avatar img {
+    border-radius: 50%;
+}
+
+.bar_avatar {
+    font-size: 1.2em;
+    text-align: center;
+    border-bottom: 1px solid var(--bar-border-color);
+}
+
+.bar_actions {
+    margin-top: 40px;
+}
+
+.bar_action {
+    display: flex;
+    padding: 10px;
+    background-color: #888;
+    border-bottom: 1px solid var(--bar-border-color);
+}
+
+.bar_action:hover {
+    background-color: #878;
+    cursor: pointer;
+}
+
+.bar_action_icon {
+    margin-right: 5px;
+}
+
+.content {
+    width: 75%;
+}
+
+.content_list {
+    padding: 5px;
+}
+
+.content_item {
+    margin: 10px;
+    border: 1px solid #888;
+    border-radius: 1em;
+    padding: 10px;
+}
+
+.content_item:hover {
+    border: 1px solid #333;
+    cursor: pointer;
+}
+
+.content_item_date {
+    background-color: #998;
+}
+
+.content_item_preview {
+    font-size: 1.2em;
+}
+
+
+
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  /* make main axis vertical */
+    height: 100vh;
+}
+
+.logging-form {
+    background-color: #ccc;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1em;
+    padding: 10px;
+}
+.logging-form h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.logging-form input {
+    padding: 10px;
+    margin: 5px;
+    font-size: 1.2em;
 }

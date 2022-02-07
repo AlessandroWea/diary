@@ -21,7 +21,7 @@ class Config
 
 	public static $db = [
 		'host' => 'localhost',
-		'name' => 'test2',
+		'name' => 'diary',
 		'user' => 'root',
 		'password' => ''
 	];

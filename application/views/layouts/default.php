@@ -9,4 +9,7 @@
 <body>
 	<?php echo $content;?>
 </body>
+<script>
+	let SERVER_PATH = 'http://localhost/diary/';
+</script>
 </html>

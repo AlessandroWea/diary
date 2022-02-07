@@ -2,7 +2,7 @@
 
 define("ROOT_DIR_NAME",@end(explode('/', __DIR__)));
 define('ROOT', dirname(__FILE__));
-define("SERVER_PATH", "http://localhost/diary");
+define("SERVER_PATH", "http://localhost/diary/");
 
 require 'application/lib/Dev.php';
 

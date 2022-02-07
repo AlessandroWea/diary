@@ -15,6 +15,11 @@ class Router
 	private function getURI()
 	{
 		$url = trim($_SERVER['REQUEST_URI'],'/');
+		
+		// if(strpos($url, '?') === strlen($url)-1)
+		// {
+		// 	$url = substr_replace($url,"",strlen($url)-1, 1);
+		// }
 		$url = trim(str_replace(ROOT_DIR_NAME, '', $url),'/');
 
 		return $url;
