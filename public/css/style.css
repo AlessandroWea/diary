@@ -114,3 +114,32 @@ a {
     margin: 5px;
     font-size: 1.2em;
 }
+
+.wrapper-write {
+    width: 1200px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.wrapper-write h1 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.save-btn {
+    padding: 10px 20px 10px 20px;
+    margin-top: 5px;
+    background-color: #656;
+    border-radius: 3px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.save-btn:hover {
+    color: red;
+    border: 1px solid red;
+}
+
+.ck-editor__editable_inline {
+    min-height: 400px;
+}
