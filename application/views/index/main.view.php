@@ -2,7 +2,7 @@
 	<div class="bar">
 		<div class="bar_avatar">
 			<img width="300px" src="https://cdn.pixabay.com/photo/2014/03/29/09/17/cat-300572_1280.jpg" alt="Avatar">
-			<p>Name: Alexander</p>
+			<p>Name: <?=$_SESSION['user_name'];?></p>
 		</div>
 
 		<div class="bar_actions">
@@ -26,55 +26,14 @@
 	</div>
 	<div class="content">
 		<div class="content_list">
-			<div class="content_item">
-				<a href="content/1">
-					<span class="content_item_date">22.11.2022</span>
-					<span class="content_item_preview">Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Corporis, odio!</span>					
-				</a>
-			</div>
-			<div class="content_item">
-				<a href="#">
-					<span class="content_item_date">22.11.2022</span>
-					<span class="content_item_preview">Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Corporis, odio!</span>					
-				</a>
-			</div>
-			<div class="content_item">
-				<a href="#">
-					<span class="content_item_date">22.11.2022</span>
-					<span class="content_item_preview">Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Corporis, odio!</span>					
-				</a>
-			</div>
-			<div class="content_item">
-				<a href="#">
-					<span class="content_item_date">22.11.2022</span>
-					<span class="content_item_preview">Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Corporis, odio!</span>					
-				</a>
-			</div>
-			<div class="content_item">
-				<a href="#">
-					<span class="content_item_date">22.11.2022</span>
-					<span class="content_item_preview">Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Corporis, odio!</span>					
-				</a>
-			</div>
-			<div class="content_item">
-				<a href="#">
-					<span class="content_item_date">22.11.2022</span>
-					<span class="content_item_preview">Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Corporis, odio!</span>					
-				</a>
-			</div>
-			<div class="content_item">
-				<a href="#">
-					<span class="content_item_date">22.11.2022</span>
-					<span class="content_item_preview">Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Corporis, odio!</span>					
-				</a>
-			</div>
-			<div class="content_item">
-				<a href="#">
-					<span class="content_item_date">22.11.2022</span>
-					<span class="content_item_preview">Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Corporis, odio!</span>					
-				</a>
-			</div>
-
+			<?php foreach($writings as $writing): ?>
+				<div class="content_item">
+					<a href="<?=$writing['id']?>">
+						<span class="content_item_date"><?=$writing['date_of_creation']?></span>
+						<span class="content_item_preview"><?=$writing['preview']?></span>					
+					</a>
+				</div>
+			<?php endforeach;?>
 		</div>
 	</div>
 </div>

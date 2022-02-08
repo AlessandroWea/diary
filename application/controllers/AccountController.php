@@ -24,6 +24,7 @@ class AccountController extends Controller {
                 if(password_verify($pwd, $user['password']))
                 {
                     $_SESSION['user_email'] = $user['email'];
+                    $_SESSION['user_name'] = $user['name'];
                     $this->view->redirect(SERVER_PATH);
                 }
                 else
@@ -76,6 +77,7 @@ class AccountController extends Controller {
 
                         Account::addUser($email, $name, $hashed_password);
                         $_SESSION['user_email'] = $email;
+                        $_SESSION['user_name'] = $name;
                         $this->view->redirect(SERVER_PATH);
                     }
                     else
