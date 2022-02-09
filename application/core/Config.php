@@ -16,6 +16,7 @@ class Config
 		//WritingController
 		'write' => 'writing/write',
 		'view/([0-9]+)' => 'writing/view/$1',
+		'save' => 'writing/save',
 
 	);
 

@@ -20,11 +20,11 @@ class AccountController extends Controller {
 
             if($user = Account::getUserByEmail($email))
             {
-                debug(password_verify($pwd, $user['password']) ? 'ss' : 'aa');
                 if(password_verify($pwd, $user['password']))
                 {
                     $_SESSION['user_email'] = $user['email'];
                     $_SESSION['user_name'] = $user['name'];
+                    $_SESSION['user_id'] = $user['id'];
                     $this->view->redirect(SERVER_PATH);
                 }
                 else

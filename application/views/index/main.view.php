@@ -6,7 +6,7 @@
 		</div>
 
 		<div class="bar_actions">
-			<a href="#">
+			<a href="<?=SERVER_PATH . 'write'?>">
 				<div class="bar_action">
 					<img class="bar_action_icon" width="20px" src="./public/assets/copy-writing.png" alt="icon"><p>Write today's diary</p>
 				</div>		
@@ -28,9 +28,9 @@
 		<div class="content_list">
 			<?php foreach($writings as $writing): ?>
 				<div class="content_item">
-					<a href="<?=$writing['id']?>">
+					<a href="<?=SERVER_PATH . 'view/' . $writing['id']?>">
 						<span class="content_item_date"><?=$writing['date_of_creation']?></span>
-						<span class="content_item_preview"><?=$writing['preview']?></span>					
+						<span class="content_item_preview"><?=$writing['preview']?></span>	
 					</a>
 				</div>
 			<?php endforeach;?>

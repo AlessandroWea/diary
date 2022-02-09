@@ -14,4 +14,20 @@ class Writing
             'email' => $email,
         ]);
     }
+
+    public static function addWriting($writing)
+    {
+        Db::execute("INSERT INTO writings SET id_user=:id_user, preview=:preview, content=:content", [
+            'id_user' => $_SESSION['user_id'],
+            'preview' => $writing['preview'],
+            'content' => $writing['content'],
+        ]);
+    }
+
+    public static function getWritingById($id)
+    {
+        return Db::execute_v2("SELECT * FROM writings WHERE id=:id",[
+            'id' => $id,
+        ])->fetch();
+    }
 }

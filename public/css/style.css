@@ -143,3 +143,19 @@ a {
 .ck-editor__editable_inline {
     min-height: 400px;
 }
+
+.wrapper-view {
+    width: 1200px;
+    margin: 0 auto;
+    border: 1px solid #777;
+    height: 100vh;
+    padding: 5px;
+}
+
+#view-header, #view-preview {
+    text-align: center;
+}
+
+#line {
+    margin-bottom: 10px;
+}
